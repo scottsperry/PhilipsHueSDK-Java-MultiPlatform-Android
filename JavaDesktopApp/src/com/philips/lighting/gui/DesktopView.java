@@ -30,6 +30,8 @@ public class DesktopView extends JFrame {
     private static final long serialVersionUID = -7469471678945429320L;  
     private Controller controller;
     private JButton setLightsButton;
+    private JButton dbgButton;
+    private JButton lButton;
     private JButton randomLightsButton;
     private JButton findBridgesButton;
     private JButton connectToLastBridgeButton;
@@ -54,6 +56,7 @@ public class DesktopView extends JFrame {
         //Set up components preferred size
         String lastUsername = HueProperties.getUsername(); 
         String lastConnectedIPStr = HueProperties.getLastConnectedIP();
+
         
         JLabel labelLastConIP    = new JLabel("Last Connected IP:");
         lastConnectedIP = new JTextField(lastConnectedIPStr);
@@ -99,7 +102,28 @@ public class DesktopView extends JFrame {
                 controller.showControlLightsWindow();
             }
         });
-        
+
+        dbgButton = new JButton("Dump debug");
+        dbgButton.setEnabled(true);
+        dbgButton.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                controller.debugLights();
+            }
+        });
+
+
+        lButton = new JButton("Lights On/Off");
+        lButton.setEnabled(true);
+        lButton.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                controller.showMyControlLightsWindow();
+            }
+        });
+
         randomLightsButton = new JButton("Randomize Lights");
         randomLightsButton.setEnabled(false);
         randomLightsButton.addActionListener(new ActionListener() {
@@ -131,7 +155,9 @@ public class DesktopView extends JFrame {
         
         mainPanel.add(randomLightsButton,        " 5, 5");
         mainPanel.add(setLightsButton,           " 5, 7");
-        
+        mainPanel.add(dbgButton,                 " 3, 7");
+        mainPanel.add(lButton,                 " 3, 5");
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setPreferredSize(new Dimension(700,270));
         

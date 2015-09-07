@@ -9,6 +9,7 @@ import com.philips.lighting.data.HueProperties;
 import com.philips.lighting.gui.AccessPointList;
 import com.philips.lighting.gui.DesktopView;
 import com.philips.lighting.gui.LightColoursFrame;
+import com.philips.lighting.gui.LightsFrame;
 import com.philips.lighting.gui.PushLinkFrame;
 import com.philips.lighting.hue.sdk.PHAccessPoint;
 import com.philips.lighting.hue.sdk.PHBridgeSearchManager;
@@ -29,6 +30,7 @@ public class Controller {
     
     private PushLinkFrame pushLinkDialog;
     private LightColoursFrame lightColoursFrame;
+    private LightsFrame lightsFrame;
     
     private static final int MAX_HUE=65535;
     private Controller instance;
@@ -37,6 +39,7 @@ public class Controller {
         this.desktopView = view;
         this.phHueSDK = PHHueSDK.getInstance();
         this.instance = this;
+        connectToLastKnownAccessPoint();
     }
 
     public void findBridges() {
@@ -93,14 +96,17 @@ public class Controller {
 
         @Override
         public void onCacheUpdated(List<Integer> arg0, PHBridge arg1) {
+            System.out.println("onCacheUpdated");
         }
 
         @Override
         public void onConnectionLost(PHAccessPoint arg0) {
+            System.out.println("onConnectionLost");
         }
 
         @Override
         public void onConnectionResumed(PHBridge arg0) {
+            System.out.println("onConnectionResumed");
         }
 
         @Override
@@ -160,6 +166,29 @@ public class Controller {
             lightState.setHue(rand.nextInt(MAX_HUE));
             bridge.updateLightState(light, lightState); // If no bridge response is required then use this simpler form.
         }
+    }
+
+    public void debugLights() {
+        PHBridge bridge = phHueSDK.getSelectedBridge();
+        PHBridgeResourcesCache cache = bridge.getResourceCache();
+
+        List<PHLight> allLights = cache.getAllLights();
+
+        for (PHLight light : allLights) {
+            light.getLastKnownLightState();
+            System.out.println("A light :" + light +
+                    " last state= " + light.getLastKnownLightState().getBrightness() +
+                    " on= " + light.getLastKnownLightState().isOn()
+            );
+        }
+    }
+
+    public void showMyControlLightsWindow() {
+        if (lightsFrame == null) {
+            lightsFrame = new LightsFrame();
+        }
+        lightsFrame.setLocationRelativeTo(null); // Centre window
+        lightsFrame.setVisible(true);
     }
 
     public void showControlLightsWindow() {
