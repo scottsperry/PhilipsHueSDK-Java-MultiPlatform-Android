@@ -1,7 +1,6 @@
 package com.philips.lighting.gui;
 
 import com.philips.lighting.hue.sdk.PHHueSDK;
-import com.philips.lighting.hue.sdk.utilities.PHUtilities;
 import com.philips.lighting.model.PHBridge;
 import com.philips.lighting.model.PHLight;
 import com.philips.lighting.model.PHLightState;
@@ -23,7 +22,7 @@ public class LightsFrame extends JFrame  {
   private static final long serialVersionUID = -3830092035262367974L;
   private PHHueSDK phHueSDK;
 
-  private JList <String> lightIdentifiersList;
+
   private List<PHLight> allLights;
 
   public LightsFrame() {
@@ -39,79 +38,55 @@ public class LightsFrame extends JFrame  {
     
     // To get lights use the Resource Cache.  
     allLights = bridge.getResourceCache().getAllLights();
-   
-    DefaultListModel <String> sampleModel = new DefaultListModel<String>();
-    
+
+      JPanel allLightsPanel = new JPanel();
+      allLightsPanel.setBackground(Color.white);
+
     for (PHLight light : allLights) {
-        sampleModel.addElement(light.getIdentifier() + "  " + light.getName() );
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setBackground(Color.white);
+        Border buttonPanelBorder = BorderFactory.createTitledBorder(light.getName());
+        buttonPanel.setBorder(buttonPanelBorder);
+
+        JButton onButton = new JButton("On " + light.getName());
+        onButton.addActionListener(new BulbOn(light.getIdentifier()));
+
+        JButton offButton = new JButton("Off " + light.getName());
+        offButton.addActionListener(new BulbOff(light.getIdentifier()));
+
+        buttonPanel.add(onButton);
+        buttonPanel.add(offButton);
+        allLightsPanel.add(buttonPanel);
     }
 
-    lightIdentifiersList = new JList<String>(sampleModel);
-    lightIdentifiersList.setVisibleRowCount(4);
-    lightIdentifiersList.setSelectedIndex(0);
-
-    JScrollPane listPane = new JScrollPane(lightIdentifiersList);
-    listPane.setPreferredSize(new Dimension(300,100));
-    
-    JPanel listPanel = new JPanel();
-    listPanel.setBackground(Color.white);
-    
-    Border listPanelBorder = BorderFactory.createTitledBorder("My Lights");
-    listPanel.setBorder(listPanelBorder);
-    listPanel.add(listPane);
-    content.add(listPanel, BorderLayout.CENTER);
-    
-    JButton onButton = new JButton("On");
-    onButton.addActionListener(new BulbOn());
-
-    JButton offButton = new JButton("Off");
-    offButton.addActionListener(new BulbOff());
-
-      Border buttonPanelBorder = BorderFactory.createTitledBorder("Change Selected");
-    JPanel buttonPanel = new JPanel();
-    buttonPanel.setBackground(Color.white);
-    buttonPanel.setBorder(buttonPanelBorder);
-    buttonPanel.add(onButton);
-    buttonPanel.add(offButton);
-    
-    content.add(buttonPanel, BorderLayout.SOUTH);
-    setPreferredSize(new Dimension(400,250));
+    content.add(allLightsPanel);
+    setPreferredSize(new Dimension(400, 250));
     pack();
     setVisible(true);
   }
 
   private class BulbOn implements ActionListener {
+      String lightIdentifier;
+      public BulbOn(String identifier) {
+          this.lightIdentifier = identifier;
+      }
     public void actionPerformed(ActionEvent event) {
-        
-
-            int selectedBulb = lightIdentifiersList.getSelectedIndex();
-            if (selectedBulb !=-1) {
-                int selectedIndex= lightIdentifiersList.getSelectedIndex();
-                String lightIdentifer = allLights.get(selectedIndex).getIdentifier();
-                
-                PHLightState lightState = new PHLightState();
-                lightState.setOn(true);
-                phHueSDK.getSelectedBridge().updateLightState(lightIdentifer, lightState, null);  // null is passed here as we are not interested in the response from the Bridge. 
-                
-            }
-
+        PHLightState lightState = new PHLightState();
+        lightState.setOn(true);
+        phHueSDK.getSelectedBridge().updateLightState(this.lightIdentifier, lightState, null);  // null is passed here as we are not interested in the response from the Bridge.
     }
   } // class
 
     private class BulbOff implements ActionListener {
+        String lightIdentifier;
+        public BulbOff(String identifier) {
+            this.lightIdentifier = identifier;
+        }
+
         public void actionPerformed(ActionEvent event) {
-
-
-            int selectedBulb = lightIdentifiersList.getSelectedIndex();
-            if (selectedBulb !=-1) {
-                int selectedIndex= lightIdentifiersList.getSelectedIndex();
-                String lightIdentifer = allLights.get(selectedIndex).getIdentifier();
-
-                PHLightState lightState = new PHLightState();
-                lightState.setOn(false);
-                phHueSDK.getSelectedBridge().updateLightState(lightIdentifer, lightState, null);  // null is passed here as we are not interested in the response from the Bridge.
-
-            }
+            PHLightState lightState = new PHLightState();
+            lightState.setOn(false);
+            phHueSDK.getSelectedBridge().updateLightState(this.lightIdentifier, lightState, null);  // null is passed here as we are not interested in the response from the Bridge.
 
         }
     } // class
