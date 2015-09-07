@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JavaDesktopApp:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaDesktopApp_jar</output-path>
+    <root id="archive" name="JavaDesktopApp.jar">
+      <element id="module-output" name="JavaDesktopApp" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/tablelayout.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/huelocalsdk.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/huesdkresources.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
