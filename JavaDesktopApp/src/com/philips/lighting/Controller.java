@@ -97,6 +97,11 @@ public class Controller {
         @Override
         public void onCacheUpdated(List<Integer> arg0, PHBridge arg1) {
             System.out.println("onCacheUpdated");
+            //debugLights();
+            if (lightsFrame != null) {
+                lightsFrame.drawFrame();
+            }
+
         }
 
         @Override
@@ -106,7 +111,7 @@ public class Controller {
 
         @Override
         public void onConnectionResumed(PHBridge arg0) {
-            System.out.println("onConnectionResumed");
+            //System.out.println("onConnectionResumed");
         }
 
         @Override
@@ -176,9 +181,9 @@ public class Controller {
 
         for (PHLight light : allLights) {
             light.getLastKnownLightState();
-            System.out.println("A light :" + light +
-                    " last state= " + light.getLastKnownLightState().getBrightness() +
-                    " on= " + light.getLastKnownLightState().isOn()
+            System.out.println(light.getName() + " (" + light.getLightType() + ") " +
+                    " brightness= " + light.getLastKnownLightState().getBrightness() +
+                    " " + (light.getLastKnownLightState().isOn() ? "***ON***" : "off")
             );
         }
     }

@@ -26,11 +26,15 @@ public class LightsFrame extends JFrame  {
   private List<PHLight> allLights;
 
   public LightsFrame() {
-    super("Bulb Colour Changer");
+    super("Bulb On/Off");
     
     // The the HueSDK singleton.
     phHueSDK = PHHueSDK.getInstance();
-    
+      drawFrame();
+
+  }
+
+ public void drawFrame() {
     Container content = getContentPane();
    
     // Get the selected bridge.
@@ -45,14 +49,16 @@ public class LightsFrame extends JFrame  {
     for (PHLight light : allLights) {
         JPanel buttonPanel = new JPanel();
         buttonPanel.setBackground(Color.white);
-        Border buttonPanelBorder = BorderFactory.createTitledBorder(light.getName());
+        Border buttonPanelBorder = BorderFactory.createTitledBorder(light.getName() + " dim=" + light.getLastKnownLightState().getBrightness() );
         buttonPanel.setBorder(buttonPanelBorder);
 
         JButton onButton = new JButton("On " + light.getName());
         onButton.addActionListener(new BulbOn(light.getIdentifier()));
+        onButton.setEnabled( !light.getLastKnownLightState().isOn() );
 
         JButton offButton = new JButton("Off " + light.getName());
         offButton.addActionListener(new BulbOff(light.getIdentifier()));
+        offButton.setEnabled( light.getLastKnownLightState().isOn() );
 
         buttonPanel.add(onButton);
         buttonPanel.add(offButton);
