@@ -72,7 +72,7 @@
       <file leaf-file-name="LightColoursFrame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/philips/lighting/gui/LightColoursFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="3" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="1755">
+            <state line="76" column="83" selection-start="2430" selection-end="2510" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1425">
               <folding />
             </state>
           </provider>
@@ -81,7 +81,7 @@
       <file leaf-file-name="LightsFrame.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/philips/lighting/gui/LightsFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="61" selection-start="3023" selection-end="3023" vertical-scroll-proportion="0.59504133" vertical-offset="840" max-vertical-offset="1695">
+            <state line="41" column="4" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.18181819" vertical-offset="355" max-vertical-offset="1425">
               <folding />
             </state>
           </provider>
@@ -90,8 +90,11 @@
       <file leaf-file-name="DesktopView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/philips/lighting/gui/DesktopView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="44" selection-start="4040" selection-end="4040" vertical-scroll-proportion="0.0" vertical-offset="1740" max-vertical-offset="3225">
-              <folding />
+            <state line="111" column="38" selection-start="3953" selection-end="3964" vertical-scroll-proportion="-8.222222" vertical-offset="918" max-vertical-offset="2340">
+              <folding>
+                <element signature="e#4112#4297#0" expanded="true" />
+                <element signature="e#4286#4287#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -99,8 +102,13 @@
       <file leaf-file-name="Controller.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/philips/lighting/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="198" column="43" selection-start="7629" selection-end="7629" vertical-scroll-proportion="0.0" vertical-offset="2970" max-vertical-offset="3525">
-              <folding />
+            <state line="99" column="14" selection-start="4023" selection-end="4023" vertical-scroll-proportion="0.0" vertical-offset="894" max-vertical-offset="3285">
+              <folding>
+                <element signature="e#6032#6033#0" expanded="true" />
+                <element signature="e#6063#6064#0" expanded="true" />
+                <element signature="e#6118#6119#0" expanded="true" />
+                <element signature="e#6158#6159#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,9 +132,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/src/com/philips/lighting/gui/DesktopView.java" />
         <option value="$PROJECT_DIR$/src/com/philips/lighting/Controller.java" />
         <option value="$PROJECT_DIR$/src/com/philips/lighting/gui/LightsFrame.java" />
-        <option value="$PROJECT_DIR$/src/com/philips/lighting/gui/DesktopView.java" />
       </list>
     </option>
   </component>
@@ -466,17 +474,18 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26340327" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26340327" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26340327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26340327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32634032" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -485,7 +494,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997669" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32634032" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -526,14 +534,22 @@
     <entry file="file://$PROJECT_DIR$/src/com/philips/lighting/gui/DesktopView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="116" column="44" selection-start="4040" selection-end="4040" vertical-scroll-proportion="0.0" vertical-offset="1740" max-vertical-offset="3225">
-          <folding />
+          <folding>
+            <element signature="e#4112#4297#0" expanded="true" />
+            <element signature="e#4286#4287#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/philips/lighting/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="198" column="43" selection-start="7629" selection-end="7629" vertical-scroll-proportion="0.0" vertical-offset="2970" max-vertical-offset="3525">
-          <folding />
+          <folding>
+            <element signature="e#6032#6033#0" expanded="true" />
+            <element signature="e#6063#6064#0" expanded="true" />
+            <element signature="e#6118#6119#0" expanded="true" />
+            <element signature="e#6158#6159#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -568,30 +584,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/philips/lighting/gui/LightColoursFrame.java">
+    <entry file="jar:///usr/lib/jvm/default-java/jre/lib/rt.jar!/java/awt/Container.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="3" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="1425">
+        <state line="66" column="30" selection-start="2544" selection-end="2544" vertical-scroll-proportion="1.6469594" vertical-offset="0" max-vertical-offset="6345">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/philips/lighting/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/com/philips/lighting/gui/LightColoursFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="198" column="43" selection-start="7629" selection-end="7629" vertical-scroll-proportion="0.0" vertical-offset="2634" max-vertical-offset="3465">
+        <state line="76" column="83" selection-start="2430" selection-end="2510" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1425">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/philips/lighting/gui/DesktopView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="44" selection-start="4040" selection-end="4040" vertical-scroll-proportion="0.0" vertical-offset="1740" max-vertical-offset="3225">
-          <folding />
+        <state line="111" column="38" selection-start="3953" selection-end="3964" vertical-scroll-proportion="-8.222222" vertical-offset="918" max-vertical-offset="2340">
+          <folding>
+            <element signature="e#4112#4297#0" expanded="true" />
+            <element signature="e#4286#4287#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/philips/lighting/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="14" selection-start="4023" selection-end="4023" vertical-scroll-proportion="0.0" vertical-offset="894" max-vertical-offset="3285">
+          <folding>
+            <element signature="e#6032#6033#0" expanded="true" />
+            <element signature="e#6063#6064#0" expanded="true" />
+            <element signature="e#6118#6119#0" expanded="true" />
+            <element signature="e#6158#6159#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/philips/lighting/gui/LightsFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="61" selection-start="3023" selection-end="3023" vertical-scroll-proportion="0.59504133" vertical-offset="840" max-vertical-offset="1695">
+        <state line="41" column="4" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.18181819" vertical-offset="355" max-vertical-offset="1425">
           <folding />
         </state>
       </provider>
